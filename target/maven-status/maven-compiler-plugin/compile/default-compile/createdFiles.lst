@@ -1,0 +1,11 @@
+com/ps/service/BitCoinSupportedCurrenciesService.class
+com/ps/controller/BitCoinController.class
+com/ps/model/BitCoinStatsRequest.class
+com/ps/BitCoinServiceApplication.class
+com/ps/model/BitCoinStatsResponse.class
+com/ps/util/PsConstants.class
+com/ps/model/BitCoinsStats.class
+com/ps/service/BitCoinStatsService.class
+com/ps/util/PsUtil.class
+com/ps/model/SupportedCurrencies.class
+com/ps/config/RestTemplateConfig.class

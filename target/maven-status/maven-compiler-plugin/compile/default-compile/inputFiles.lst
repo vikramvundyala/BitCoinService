@@ -1,0 +1,11 @@
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/model/BitCoinsStats.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/util/PsConstants.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/model/BitCoinStatsResponse.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/util/PsUtil.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/config/RestTemplateConfig.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/controller/BitCoinController.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/service/BitCoinStatsService.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/BitCoinServiceApplication.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/service/BitCoinSupportedCurrenciesService.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/model/BitCoinStatsRequest.java
+/home/vvikram/vikram-ms/Vikram/BitCoinService/src/main/java/com/ps/model/SupportedCurrencies.java
