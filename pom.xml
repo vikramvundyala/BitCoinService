@@ -73,7 +73,7 @@
        <repository>
          <id>internal.repo</id>
          <name>Internal repo</name>
-         <url>file://home/vvikram/test-deploy</url>
+         <url>https://repo.jenkins-ci.org/artifactory/public/</url>
        </repository>
    </distributionManagement>
 
