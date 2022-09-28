@@ -68,5 +68,13 @@
 		</plugins>
 		<finalName>BitCoinService</finalName>
 	</build>
+	
+	<distributionManagement>
+       <repository>
+         <id>internal.repo</id>
+         <name>Internal repo</name>
+         <url>file:///home/vvikram/test-deploy</url>
+       </repository>
+   </distributionManagement>
 
 </project>
