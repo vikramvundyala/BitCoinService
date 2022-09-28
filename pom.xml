@@ -73,7 +73,7 @@
        <repository>
          <id>internal.repo</id>
          <name>Internal repo</name>
-         <url>https://repo.jenkins-ci.org/artifactory/public/</url>
+         <url>file:///./home</url>
        </repository>
    </distributionManagement>
 
