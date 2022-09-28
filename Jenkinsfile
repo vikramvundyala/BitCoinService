@@ -6,7 +6,7 @@ pipeline {
             steps {
               withMaven(maven: 'maven_3.8.6'){
                 echo 'in compile stage'
-                sh 'mvn clean compile'
+                sh 'mvn clean compile package'
              }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
            steps{
              withMaven(maven: 'maven_3.8.6'){
                echo 'in Deploy stage'
-               sh 'mvn deploy'
+               sh 'mvn -X -e deploy'
               }
            }
        }
