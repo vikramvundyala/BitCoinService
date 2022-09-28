@@ -73,7 +73,7 @@
        <repository>
          <id>internal.repo</id>
          <name>Internal repo</name>
-         <url>file:///var/jenkins_home/workspace/bitcoin_job/target</url>
+         <url>file:///home/vvikram/.jenkins/workspace/vikram_bitcoin/target</url>
        </repository>
    </distributionManagement>
 
