@@ -24,7 +24,7 @@ pipeline {
            steps{
              withMaven(maven: 'maven_3.8.6'){
                echo 'in Deploy stage'
-               sh 'mvn -X -e deploy'
+               sh 'java -jar /var/jenkins_home/workspace/bitcoin_job/target/BitCoinService.jar'
               }
            }
        }
