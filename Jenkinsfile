@@ -1,13 +1,10 @@
 pipeline {
     agent any
 
-    tools {
-        maven "M3"
-    }
-
-    stages {
+       stages {
         stage('Compile') {
             steps {
+                echo 'in compile stage'
                 sh "mvn clean compile"
 
             }
@@ -15,12 +12,14 @@ pipeline {
         
        stage('Test') {
            steps{
+               echo 'in Test stage'
                sh "mvn test"
            }
        }
        
          stage('Deploy') {
            steps{
+               echo 'in Deploy stage'
                sh "mvn deploy"
            }
        }
