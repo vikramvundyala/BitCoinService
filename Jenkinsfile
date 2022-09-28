@@ -20,14 +20,13 @@ pipeline {
            }
        }
        
-         stage('Deploy') {
+       stage('containerize') {
            steps{
-             withMaven(maven: 'maven_3.8.6'){
                echo 'in Deploy stage'
-               sh 'mvn deploy'
-              }
+               sh 'docker build -t /home/vvikram/.jenkins/workspace/vikram_bitcoin/target/BitCoinService.jar bitcoinservice'
            }
        }
+       
 
     }
 }
