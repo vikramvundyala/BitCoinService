@@ -23,7 +23,7 @@ pipeline {
        stage('containerize') {
            steps{
                echo 'in Deploy stage'
-               sh 'docker build -t /home/vvikram/.jenkins/workspace/vikram_bitcoin/target/BitCoinService.jar bitcoinservice'
+               sh 'docker build -t bitcoinservice'
            }
        }
        
