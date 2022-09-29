@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    
+    def test = pwd();
 
        stages {
         stage('Compile') {
@@ -30,6 +32,7 @@ pipeline {
        
        stage('run container') {
            steps{
+             echo('This is vikram ${test}');
              script{
                sh 'sudo docker run -p 9095:9095 -d bitcoinservice'   
              }
