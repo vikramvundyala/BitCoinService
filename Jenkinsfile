@@ -23,7 +23,7 @@ pipeline {
        stage('containerize') {
            steps{
              script{
-               sh 'docker build -t bitcoinservice'   
+               sh 'docker build -t bitcoinservice .'   
              }
            }
        }
