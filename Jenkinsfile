@@ -23,7 +23,15 @@ pipeline {
        stage('containerize') {
            steps{
              script{
-               sh 'docker build -t bitcoinservice .'   
+               sh 'sudo docker build -t bitcoinservice .'   
+             }
+           }
+       }
+       
+       stage('run container') {
+           steps{
+             script{
+               sh 'sudo docker run -p 9095:9095 -d bitcoinservice'   
              }
            }
        }
