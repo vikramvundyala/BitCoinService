@@ -1,8 +1,6 @@
 pipeline {
     agent any
     
-    def test = pwd();
-
        stages {
         stage('Compile') {
             steps {
@@ -17,25 +15,15 @@ pipeline {
            steps{
              withMaven(maven: 'maven_3.8.6'){
                echo 'in Test stage'
+               println(pwd())
                sh 'mvn test'
               }
            }
        }
        
-       stage('containerize') {
-           steps{
-             script{
-               sh 'sudo docker build -t bitcoinservice .'   
-             }
-           }
-       }
-       
        stage('run container') {
            steps{
-             echo('This is vikram ${test}');
-             script{
-               sh 'sudo docker run -p 9095:9095 -d bitcoinservice'   
-             }
+             sh 'sudo docker run -p 9095:9095 vikramvundyala/bitcoinservice'
            }
        }
        
