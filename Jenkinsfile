@@ -15,7 +15,6 @@ pipeline {
            steps{
              withMaven(maven: 'maven_3.8.6'){
                echo 'in Test stage'
-               println(pwd())
                sh 'mvn test'
               }
            }
@@ -23,10 +22,14 @@ pipeline {
        
        stage('run container') {
            steps{
-             sh 'sudo docker run -p 9095:9095 vikramvundyala/bitcoinservice'
+             withMaven(maven: 'maven_3.8.6'){
+               echo 'in run container'  
+               sh 'echo "test" | sudo -S docker stop bitcoin_service || exit 0'
+               sh 'echo "test" | sudo -S docker rm bitcoin_service || exit 0'
+               sh 'echo "test" | sudo -S docker rmi vikramvundyala/bitcoinservice || exit 0'
+               sh 'echo "test" | sudo -S docker run -d -p 9095:9095 --name bitcoin_service vikramvundyala/bitcoinservice'
+             }
            }
        }
-       
-
     }
 }
